@@ -1,0 +1,110 @@
+.film_card{
+    padding: 29px;
+    width: 798px;
+    height: 825px;
+    background: #FDFDFF;
+    border: 1px solid #EBEBEB;
+    box-sizing: border-box;
+    border-radius: 13px;
+    display: grid;
+    grid-template-columns: 69px 144px auto;
+    grid-template-rows: auto auto 1fr 1fr;
+    grid-gap: 23px;
+}
+.film_title{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-left: 11px;
+    max-width: 303px;;
+    font-family: 'Alata', sans-serif;
+    font-size: 24px;
+    line-height: 33px;
+    color: #7F7FD5;
+}
+.film_poster{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    width: 224px;
+    height: 341px;
+}
+.film_description{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    margin-left: 11px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 15px;
+}
+.film_description :nth-child(odd){
+    font-family: 'Alata', sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+    color: #979797;
+}
+.film_description :nth-child(even){
+    font-family: 'Alata', sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+    color: #3A236A;
+}
+.film_rating{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+.film_rating :nth-child(1){
+    width: 69px;
+    height: 20px;
+    background: #7F7FD5;
+    border: 1px solid #7F7FD5;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-family: 'Alata', sans-serif;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.film_rating :nth-child(2){
+    width: 113px;
+    height: 89px;
+    font-family: 'Alata', sans-serif;
+    font-size: 60px;
+    line-height: 83px;
+    display: flex;
+    align-items: center;
+    color: #7F7FD5;
+}
+.film_voted{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    font-family: 'Alata', sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    color: #3A236A;
+}
+.film_voted :nth-child(2){
+    margin-right: 6px;
+}
+.film_plot{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    font-family: 'Alata', sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+    color: #979797;
+}
