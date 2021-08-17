@@ -8,6 +8,6 @@ interface ICardTitle {
 
 export const CardTitle = memo( ({ title }: ICardTitle) => {
     return (
-        <h3 className = "film_title">{title}</h3>
+        <h3 className = "card_title">{title}</h3>
     )
 })

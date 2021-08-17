@@ -3,7 +3,7 @@ import { memo } from "react"
 import { IFilm } from "../../../types"
 import { CardTitle } from "../../atoms/CardTitle"
 import { FilmPoster } from "../../atoms/FilmPoster"
-import { FilmDescription } from "../../atoms/FilmDescription"
+import { FilmDescriptionList } from "../../atoms/FilmDescriptionList"
 import { FilmRating } from "../../atoms/FilmRating"
 import { FilmVotes } from "../../atoms/FilmVotes"
 import { FilmPlot } from "../../atoms/FilmPlot"
@@ -11,10 +11,10 @@ import "./index.css"
 
 export const FilmCard = memo(
     ({ title, poster, year, released, runtime, boxOffice, genre, country, production, writer, director, actors, imdbRating, imdbVotes, plot }: IFilm) => (
-        <div className="film_card">
+        <div className = "film_card">
             <CardTitle title = {title}/>
             <FilmPoster src = {poster}/>
-            <FilmDescription
+            <FilmDescriptionList
                 year = {year}
                 released = {released}
                 runtime = {runtime}

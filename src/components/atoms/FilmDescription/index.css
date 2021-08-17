@@ -1,22 +1,6 @@
 .film_description{
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 4;
-    margin-left: 11px;
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-gap: 15px;
-}
-.film_description :nth-child(odd){
     font-family: 'Alata', sans-serif;
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 24px;
+    line-height: 33px;
     color: #979797;
-}
-.film_description :nth-child(even){
-    font-family: 'Alata', sans-serif;
-    font-size: 18px;
-    line-height: 25px;
-    color: #3A236A;
 }
