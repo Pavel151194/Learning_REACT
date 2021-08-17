@@ -1,1 +1,0 @@
-export { FilmCard } from "./Film_card";

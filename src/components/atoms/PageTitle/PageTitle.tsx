@@ -3,9 +3,9 @@ import { memo } from "react"
 import "./index.css"
 
 interface ITitle {
-    title: string;
+    title: string
 }
   
-export const Title = memo(({ title }: ITitle) => (
+export const PageTitle = memo(({ title }: ITitle) => (
     <h2 className="title">{title}</h2>
 ))

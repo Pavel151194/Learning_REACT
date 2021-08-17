@@ -1,1 +1,0 @@
-export { FilmList } from "./Film_list";

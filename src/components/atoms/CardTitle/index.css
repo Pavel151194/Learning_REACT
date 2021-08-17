@@ -1,0 +1,12 @@
+.film_title{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    margin-left: 11px;
+    max-width: 303px;;
+    font-family: 'Alata', sans-serif;
+    font-size: 24px;
+    line-height: 33px;
+    color: #7F7FD5;
+}
