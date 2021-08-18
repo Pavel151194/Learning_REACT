@@ -11,12 +11,10 @@ interface ITrailerCard {
     trailer: ITrailer
 }
 
-export const TrailerCard = memo( ({ film, trailer }: ITrailerCard) => {
-    return (
-        <div className = "trailer_card">
-            <CardTitle {...film}/>
-            <FilmTrailer {...trailer}/>
-            <FilmDescription {...trailer}/>
-        </div>
-    )
-})
+export const TrailerCard = memo( ({ film, trailer }: ITrailerCard) => (
+    <div className = "trailer_card">
+        <CardTitle {...film}/>
+        <FilmTrailer {...trailer}/>
+        <FilmDescription {...trailer}/>
+    </div>
+) )

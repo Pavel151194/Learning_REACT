@@ -4,8 +4,7 @@ import { IFilm } from "../../../types"
 import "./index.css"
 
 export const FilmDescriptionList = memo(
-    ({ year, released, runtime, boxOffice, genre, country, production, writer, director, actors }: IFilm) => {
-    return (
+    ({ year, released, runtime, boxOffice, genre, country, production, writer, director, actors }: IFilm) => (
         <ul className = "film_description">
             <li>Year</li>
             <li>{year}</li>
@@ -29,4 +28,4 @@ export const FilmDescriptionList = memo(
             <li>{actors.join(', ')}</li>
         </ul>
     )
-})
+)

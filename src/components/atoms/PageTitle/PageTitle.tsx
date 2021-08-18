@@ -6,6 +6,6 @@ interface ITitle {
     title: string
 }
   
-export const PageTitle = memo(({ title }: ITitle) => (
+export const PageTitle = memo( ({ title }: ITitle) => (
     <h2 className="title">{title}</h2>
 ))

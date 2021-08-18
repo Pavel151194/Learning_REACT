@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { PageTitle } from './components/atoms/PageTitle/PageTitle'
+import { Header } from './components/molecules/Header'
 import { FilmCard } from './components/molecules/FilmCard'
 import { TrailerCard } from './components/molecules/TrailerCard'
 import { films, trailers } from "./mock"
@@ -15,7 +15,7 @@ const App = () => {
 
         </nav>
         <main>
-          <PageTitle title = "Movie"/>
+          <Header title = {"Movie"}/>
           <FilmCard film = {selectedFilm}/>
           <TrailerCard film = {selectedFilm} trailer = {selectedTrailer}/>
         </main>
