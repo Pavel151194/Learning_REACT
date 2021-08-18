@@ -1,7 +1,6 @@
 import * as React from "react"
-//import { memo } from "react"
-//import { IFilm } from "../../../types"
-import { films } from "../../../mock"
+import { memo } from "react"
+import { IFilm } from "../../../types"
 import { CardTitle } from "../../atoms/CardTitle"
 import { FilmPoster } from "../../atoms/FilmPoster"
 import { FilmDescriptionList } from "../../atoms/FilmDescriptionList"
@@ -10,17 +9,19 @@ import { FilmVotes } from "../../atoms/FilmVotes"
 import { FilmPlot } from "../../atoms/FilmPlot"
 import "./index.css"
 
-export const FilmCard = () => {
-    const selectedFilm = films[1]
-    console.log(selectedFilm)
+interface IFilmCard {
+    film: IFilm
+}
+
+export const FilmCard = memo( ({ film }: IFilmCard) => {
     return (
         <div className = "film_card">
-            <CardTitle {...selectedFilm}/>
-            <FilmPoster {...selectedFilm}/>
-            <FilmDescriptionList {...selectedFilm}/>
-            <FilmRating {...selectedFilm}/>
-            <FilmVotes {...selectedFilm}/>
-            <FilmPlot {...selectedFilm}/>
+            <CardTitle key = {film.id} {...film}/>
+            <FilmPoster key = {film.id} {...film}/>
+            <FilmDescriptionList key = {film.id} {...film}/>
+            <FilmRating key = {film.id} {...film}/>
+            <FilmVotes key = {film.id} {...film}/>
+            <FilmPlot key = {film.id} {...film}/>
         </div>
-   )
-}
+    )
+})
