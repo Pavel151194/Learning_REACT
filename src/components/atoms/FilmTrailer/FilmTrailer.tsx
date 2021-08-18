@@ -1,13 +1,10 @@
 import * as React from "react"
 import { memo } from "react"
+import { ITrailer } from "../../../types"
 import "./index.css"
 
-interface IFilmTrailer {
-    src: string
-}
-
-export const FilmTrailer = memo( ({ src }: IFilmTrailer) => {
+export const FilmTrailer = memo( ({ trailer }: ITrailer) => {
     return (
-        <iframe className = "film_trailer" src = {src}></iframe>
+        <iframe className = "film_trailer" src = {trailer}></iframe>
     )
 })

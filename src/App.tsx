@@ -3,7 +3,7 @@ import './App.css';
 import { PageTitle } from './components/atoms/PageTitle/PageTitle'
 import { FilmCard } from './components/molecules/FilmCard'
 import { TrailerCard } from './components/molecules/TrailerCard'
-import { films } from "./mock";
+import { films } from "./mock"
 
 const App = () => {
   const selectedFilm = films[1]
@@ -15,8 +15,8 @@ const App = () => {
         </nav>
         <main>
           <PageTitle title = "Movie"/>
-          <FilmCard {...selectedFilm}/>
-          <TrailerCard {...selectedFilm}/>
+          <FilmCard />
+          <TrailerCard/>
         </main>
       </div>
     </div>

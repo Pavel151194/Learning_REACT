@@ -1,4 +1,4 @@
-import { IFilm } from "../types"
+import { IFilm, ITrailer } from "../types"
 
 export const films: IFilm[] = [
     {
@@ -19,8 +19,6 @@ export const films: IFilm[] = [
     type: "movie",
     boxOffice: "$138,027,361",
     production: "Marvel Studios",
-    trailer: "",
-    description: ""
     },
     {
     id: 2,
@@ -40,8 +38,6 @@ export const films: IFilm[] = [
     type: "movie",
     boxOffice: "$381,409,310",
     production: "Heyday Films, Moving Picture Company, Warner Bros.",
-    trailer: "https://www.youtube.com/embed/5NYt1qirBWg",
-    description: "Harry Potter and the Deathly Hallows -- Part 2, is the final adventure in the Harry Potter film series. The much-anticipated motion picture event is the second of two full-length parts. In the epic finale, the battle between the good and evil forces of the wizarding world escalates into an all-out war.  The stakes have never been higher and no one is safe.  But it is Harry Potter who may be called upon to make the ultimate sacrifice as he draws closer to the climactic showdown with Lord Voldemort. It all ends here."
     },
     {
     id: 3,
@@ -61,8 +57,6 @@ export const films: IFilm[] = [
     type: "movie",
     boxOffice: "$460,998,507",
     production: "Lucasfilm Ltd.",
-    trailer: "",
-    description: ""
     },
     { 
     id: 4,
@@ -82,8 +76,6 @@ export const films: IFilm[] = [
     type: "movie",
     boxOffice: "$302,305,431",
     production: "Heyday Films, Warner Bros.",
-    trailer: "",
-    description: ""
     }, 
     {
     id: 5,
@@ -103,7 +95,12 @@ export const films: IFilm[] = [
     type: "movie",
     boxOffice: "$318,087,620",
     production: "1492 Pictures, Heyday Films, Warner Brothers",
-    trailer: "",
-    description: ""
+    }
+]
+
+export const trailers: ITrailer[] = [
+    {
+    trailer: "https://www.youtube.com/embed/5NYt1qirBWg",
+    description: "Harry Potter and the Deathly Hallows -- Part 2, is the final adventure in the Harry Potter film series. The much-anticipated motion picture event is the second of two full-length parts. In the epic finale, the battle between the good and evil forces of the wizarding world escalates into an all-out war.  The stakes have never been higher and no one is safe.  But it is Harry Potter who may be called upon to make the ultimate sacrifice as he draws closer to the climactic showdown with Lord Voldemort. It all ends here.",
     }
 ]

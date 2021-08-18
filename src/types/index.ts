@@ -16,6 +16,9 @@ export interface IFilm {
     type: string
     boxOffice: string
     production: string
+}
+
+export interface ITrailer {
     trailer: string
     description: string
 }

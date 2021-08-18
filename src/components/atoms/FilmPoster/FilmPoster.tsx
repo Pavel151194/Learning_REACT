@@ -1,13 +1,10 @@
 import * as React from "react"
 import { memo } from "react"
+import { IFilm } from "../../../types"
 import "./index.css"
 
-interface IFilmPoster {
-    src: string
-}
-
-export const FilmPoster = memo( ({ src }: IFilmPoster) => {
+export const FilmPoster = memo( ({ poster }: IFilm) => {
     return (
-        <img className = "film_poster" src = {src} alt = "film_poster"></img>
+        <img className = "film_poster" src = {poster} alt = "film_poster"></img>
     )
 })

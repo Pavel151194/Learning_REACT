@@ -1,6 +1,7 @@
 import * as React from "react"
-import { memo } from "react"
-import { IFilm } from "../../../types"
+//import { memo } from "react"
+//import { IFilm } from "../../../types"
+import { films } from "../../../mock"
 import { CardTitle } from "../../atoms/CardTitle"
 import { FilmPoster } from "../../atoms/FilmPoster"
 import { FilmDescriptionList } from "../../atoms/FilmDescriptionList"
@@ -9,26 +10,17 @@ import { FilmVotes } from "../../atoms/FilmVotes"
 import { FilmPlot } from "../../atoms/FilmPlot"
 import "./index.css"
 
-export const FilmCard = memo(
-    ({ title, poster, year, released, runtime, boxOffice, genre, country, production, writer, director, actors, imdbRating, imdbVotes, plot }: IFilm) => (
+export const FilmCard = () => {
+    const selectedFilm = films[1]
+    console.log(selectedFilm)
+    return (
         <div className = "film_card">
-            <CardTitle title = {title}/>
-            <FilmPoster src = {poster}/>
-            <FilmDescriptionList
-                year = {year}
-                released = {released}
-                runtime = {runtime}
-                boxOffice = {boxOffice}
-                genre = {genre}
-                country = {country}
-                production = {production}
-                writer = {writer}
-                director= {director}
-                actors = {actors}
-            />
-            <FilmRating rating = {imdbRating}/>
-            <FilmVotes votes = {imdbVotes}/>
-            <FilmPlot plot = {plot}/>
+            <CardTitle {...selectedFilm}/>
+            <FilmPoster {...selectedFilm}/>
+            <FilmDescriptionList {...selectedFilm}/>
+            <FilmRating {...selectedFilm}/>
+            <FilmVotes {...selectedFilm}/>
+            <FilmPlot {...selectedFilm}/>
         </div>
-    )
-)
+   )
+}

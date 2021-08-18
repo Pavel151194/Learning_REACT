@@ -1,16 +1,13 @@
 import * as React from "react"
 import { memo } from "react"
+import { IFilm } from "../../../types"
 import "./index.css"
 
-interface IFilmRating {
-    rating: number
-}
-
-export const FilmRating = memo( ({ rating }: IFilmRating) => {
+export const FilmRating = memo( ({ imdbRating }: IFilm) => {
     return (
         <ul className = "film_rating">
             <li>Rating</li>
-            <li>{rating}</li>
+            <li>{imdbRating}</li>
         </ul>
     )
 })

@@ -1,22 +1,10 @@
 import * as React from "react"
 import { memo } from "react"
+import { IFilm } from "../../../types"
 import "./index.css"
 
-interface IFilmDescriptionList {
-    year: number
-    released: string
-    runtime: string
-    boxOffice: string
-    genre: string[]
-    country: string
-    production: string
-    writer: string
-    director: string
-    actors: string[]
-}
-
 export const FilmDescriptionList = memo(
-    ({ year, released, runtime, boxOffice, genre, country, production, writer, director, actors }: IFilmDescriptionList) => {
+    ({ year, released, runtime, boxOffice, genre, country, production, writer, director, actors }: IFilm) => {
     return (
         <ul className = "film_description">
             <li>Year</li>
