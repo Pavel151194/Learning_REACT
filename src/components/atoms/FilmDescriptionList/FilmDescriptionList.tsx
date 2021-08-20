@@ -1,7 +1,7 @@
 import * as React from "react"
 import { memo } from "react"
 import { IFilm } from "../../../types"
-import "./index.css"
+import "./FilmDescriptionList.css"
 
 export const FilmDescriptionList = memo(
     ({ year, released, runtime, boxOffice, genre, country, production, writer, director, actors }: IFilm) => (

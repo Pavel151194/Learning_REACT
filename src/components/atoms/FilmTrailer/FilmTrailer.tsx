@@ -1,7 +1,7 @@
 import * as React from "react"
 import { memo } from "react"
 import { ITrailer } from "../../../types"
-import "./index.css"
+import "./FilmTrailer.css"
 
 export const FilmTrailer = memo( ({ trailer }: ITrailer) => (
     <iframe 

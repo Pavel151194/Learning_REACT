@@ -7,7 +7,7 @@ import { FilmDescriptionList } from "../../atoms/FilmDescriptionList"
 import { FilmRating } from "../../atoms/FilmRating"
 import { FilmVotes } from "../../atoms/FilmVotes"
 import { FilmPlot } from "../../atoms/FilmPlot"
-import "./index.css"
+import "./FilmCard.css"
 
 interface IFilmCard {
     film: IFilm

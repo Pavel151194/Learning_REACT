@@ -2,7 +2,7 @@ import * as React from "react"
 import { memo } from "react"
 import { IFilm } from "../../../types"
 import { FilmCard } from "../../atoms/FilmCard"
-import "./index.css"
+import "./FilmList.css"
 
 interface IFilmList {
     films: IFilm[]

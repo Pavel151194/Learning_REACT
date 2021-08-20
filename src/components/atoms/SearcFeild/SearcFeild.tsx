@@ -2,7 +2,7 @@ import * as React from "react"
 import { memo } from "react"
 import iconSearch from "../../../assets/iconSearch.svg"
 import iconFiltres from "../../../assets/iconFiltres.svg"
-import "./index.css"
+import "./SearcFeild.css"
   
 export const SearcFeild = memo( () => (
     <div className = "search">

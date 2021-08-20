@@ -1,7 +1,7 @@
 import * as React from "react"
 import { memo } from "react"
 import { IFilm } from "../../../types"
-import "./index.css"
+import "./FilmCard.css"
 
 export const FilmCard = memo( ({ poster, title, year, plot }: IFilm) => (
     <div className = "film_card_list">

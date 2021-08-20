@@ -1,6 +1,6 @@
 import * as React from "react"
 import { memo } from "react"
-import "./index.css"
+import "./PageTitle.css"
 
 interface ITitle {
     title: string

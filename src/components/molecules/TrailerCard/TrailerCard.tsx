@@ -4,7 +4,7 @@ import { IFilm, ITrailer } from "../../../types"
 import { CardTitle } from "../../atoms/CardTitle"
 import { FilmTrailer } from "../../atoms/FilmTrailer"
 import { FilmDescription } from "../../atoms/FilmDescription"
-import "./index.css"
+import "./TrailerCard.css"
 
 interface ITrailerCard {
     film: IFilm

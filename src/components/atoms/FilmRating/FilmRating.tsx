@@ -1,7 +1,7 @@
 import * as React from "react"
 import { memo } from "react"
 import { IFilm } from "../../../types"
-import "./index.css"
+import "./FilmRating.css"
 
 export const FilmRating = memo( ({ imdbRating }: IFilm) => (
     <ul className = "film_rating">
