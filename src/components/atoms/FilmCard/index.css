@@ -1,0 +1,42 @@
+.film_card_list{
+    max-width: 341px;
+    padding: 24px;
+    background: #FDFDFF;
+    border: 1px solid #EBEBEB;
+    border-radius: 13px;
+    display: flex;
+    flex-direction: column;
+}
+.film_card_poster{
+    width: 131px;
+    height: 199px;
+    border: 1px solid #EBEBEB;
+    align-self: center;
+    margin-bottom: 15px;
+}
+h4{
+    height: 56px;
+    font-family: 'Alata', sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+    color: #4F4F4F;
+    margin-bottom: 15px;
+}
+.film_card_year{
+    font-family: 'Alata', sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+    color: #7F7FD5;
+    margin-bottom: 15px;
+}
+.film_card_plot{
+    height: 90px;
+    font-family: 'Alata', sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+    color: #979797;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
