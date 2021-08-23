@@ -1,0 +1,55 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	box-sizing: border-box;
+	font: inherit;
+	vertical-align: baseline;
+	cursor: default;
+	outline: none;
+}
+a:link{
+  text-decoration: none;
+}
+a:visited{
+  text-decoration: none;
+}
+a:active{
+  text-decoration: none;
+}
+button{
+	background-color: rgba(0, 0, 0, 0);
+	text-decoration: none;
+	cursor: pointer;
+	user-select: none;
+}
+select, option{
+	cursor: pointer;
+}
+img{
+	line-height: 0;
+}
+li{
+	list-style-type: none;
+}
+svg path {
+    stroke: inherit;
+    stroke-width: inherit;
+
+}
+
+.App{
+  background: #f0f0fc;
+}
+.wrapper{
+	margin: 0 auto;
+	padding: 0 10px 0 0;
+	display: flex;
+}
+nav{
+  width: 98px;
+  background: #FDFDFF;
+  border: 1px solid #EBEBEB;
+  box-sizing: border-box;
+  margin-right: 50px;
+}

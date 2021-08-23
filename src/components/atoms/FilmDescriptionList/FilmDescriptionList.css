@@ -1,0 +1,21 @@
+.film_description_list{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 15px;
+}
+.film_description_list :nth-child(odd){
+    font-family: 'Alata', sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+    color: #979797;
+}
+.film_description_list :nth-child(even){
+    font-family: 'Alata', sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+    color: #3A236A;
+}

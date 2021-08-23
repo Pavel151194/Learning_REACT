@@ -1,0 +1,1 @@
+export { FilmTrailer } from "./FilmTrailer"

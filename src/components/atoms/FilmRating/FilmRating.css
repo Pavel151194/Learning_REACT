@@ -1,0 +1,29 @@
+.film_rating{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+.film_rating :nth-child(1){
+    width: 69px;
+    height: 20px;
+    background: #7F7FD5;
+    border: 1px solid #7F7FD5;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-family: 'Alata', sans-serif;
+    font-size: 12px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.film_rating :nth-child(2){
+    width: 113px;
+    height: 89px;
+    font-family: 'Alata', sans-serif;
+    font-size: 60px;
+    line-height: 83px;
+    display: flex;
+    align-items: center;
+    color: #7F7FD5;
+}
