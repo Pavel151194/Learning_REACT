@@ -5,6 +5,7 @@ import { Header } from './components/molecules/Header'
 import { FilmList } from './components/molecules/FilmList'
 import { FilmCard } from './components/molecules/FilmCard'
 import { TrailerCard } from './components/molecules/TrailerCard'
+import { RatingCard } from './components/molecules/RatingCard'
 import { films, trailers } from "./mock"
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
             film = {selectedFilm} 
             trailer = {selectedTrailer}
           />
+          <RatingCard title = {"Add rating"}/>
         </main>
       </div>
     </div>

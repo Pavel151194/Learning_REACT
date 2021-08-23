@@ -1,7 +1,6 @@
-.trailer_card{
-    width: 798px;
-    padding: 29px;
-    margin-bottom: 50px;
+.rating_card{
+    max-width: 798px;
+    padding: 32px 29px 64px;
     background: #FDFDFF;
     border: 1px solid #EBEBEB;
     border-radius: 13px;

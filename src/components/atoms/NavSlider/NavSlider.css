@@ -5,10 +5,8 @@
     height: 30px;
     cursor: pointer;
 }
-.switch input{
-    opacity: 0;
-    width: 0;
-    height: 0;
+.switch>input{
+    display: none;
 }
 .slider{
     position: absolute;
@@ -22,6 +20,7 @@
     border: 1px solid #4F4F4F;
     border-radius: 30px;
     background-color: #FDFDFF;
+    transition: all 400ms ease-in-out;
     cursor: pointer;
 }
 .slider_icon{
@@ -40,6 +39,11 @@
 .slider_icon>path{
     cursor: pointer;
 }
+input:checked + .slider{
+    background-color: #7F7FD5;
+}
 input:checked + .slider>.slider_icon{
     transform: translate(26px, 0);
+    background-color: #FDFDFF;
+    fill: #7F7FD5;
 }
