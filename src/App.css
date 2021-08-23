@@ -32,6 +32,11 @@ img{
 li{
 	list-style-type: none;
 }
+svg path {
+    stroke: inherit;
+    stroke-width: inherit;
+
+}
 
 .App{
   background: #f0f0fc;

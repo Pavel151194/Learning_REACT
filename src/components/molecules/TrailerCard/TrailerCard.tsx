@@ -7,14 +7,18 @@ import { FilmDescription } from "../../atoms/FilmDescription"
 import "./TrailerCard.css"
 
 interface ITrailerCard {
+    pretitle: string
     film: IFilm
     trailer: ITrailer
 }
 
-export const TrailerCard = memo( ({ film, trailer }: ITrailerCard) => (
+export const TrailerCard = memo( ({ pretitle, film, trailer }: ITrailerCard) => (
     <div className = "trailer_card">
-        <CardTitle {...film}/>
-        <FilmTrailer {...trailer}/>
-        <FilmDescription {...trailer}/>
+        <CardTitle 
+            pretitle = {pretitle}
+            title = {film.title}
+        />
+        <FilmTrailer trailer = {trailer.trailer}/>
+        <FilmDescription description = {trailer.description}/>
     </div>
 ) )

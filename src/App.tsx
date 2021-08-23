@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { NavBar } from './components/molecules/NavBar'
 import { Header } from './components/molecules/Header'
 import { FilmList } from './components/molecules/FilmList'
 import { FilmCard } from './components/molecules/FilmCard'
@@ -13,7 +14,7 @@ const App = () => {
     <div className="App">
       <div className="wrapper">
         <nav>
-
+          <NavBar/>
         </nav>
         <main>
           <Header title = {"Movie"}/>
@@ -22,6 +23,7 @@ const App = () => {
           ) : (<p>No film</p>)}
           <FilmCard film = {selectedFilm}/>
           <TrailerCard
+            pretitle = {"Trailer: "}
             film = {selectedFilm} 
             trailer = {selectedTrailer}
           />

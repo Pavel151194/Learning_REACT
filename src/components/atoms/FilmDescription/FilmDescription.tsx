@@ -1,8 +1,11 @@
 import * as React from "react"
 import { memo } from "react"
-import { ITrailer } from "../../../types"
 import "./FilmDescription.css"
 
-export const FilmDescription = memo( ({ description }: ITrailer) => (
+interface IFilmDescription {
+        description: string
+}
+
+export const FilmDescription = memo( ({ description }: IFilmDescription) => (
         <p className = "film_description">{description}</p>
 ) )

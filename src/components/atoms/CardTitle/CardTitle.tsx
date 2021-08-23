@@ -1,8 +1,12 @@
 import * as React from "react"
 import { memo } from "react"
-import { IFilm } from "../../../types"
 import "./CardTitle.css"
 
-export const CardTitle = memo( ({ title }: IFilm) => (
-    <h3 className = "card_title">{title}</h3>
+interface ICardTitle {
+    pretitle?: string
+    title: string
+}
+
+export const CardTitle = memo( ({ pretitle, title }: ICardTitle) => (
+    <h3 className = "card_title">{pretitle}{title}</h3>
 ) )

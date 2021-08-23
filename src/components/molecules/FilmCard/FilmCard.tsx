@@ -15,11 +15,22 @@ interface IFilmCard {
 
 export const FilmCard = memo( ({ film }: IFilmCard) => (
     <div className = "film_card">
-        <CardTitle {...film}/>
-        <FilmPoster {...film}/>
-        <FilmDescriptionList {...film}/>
-        <FilmRating {...film}/>
-        <FilmVotes {...film}/>
-        <FilmPlot {...film}/>
+        <CardTitle title = {film.title}/>
+        <FilmPoster poster = {film.poster}/>
+        <FilmDescriptionList 
+            year = {film.year}
+            released = {film.released}
+            runtime = {film.runtime}
+            boxOffice = {film.boxOffice}
+            genre = {film.genre}
+            country = {film.country}
+            production = {film.production}
+            writer = {film.writer}
+            director = {film.director}
+            actors =  {film.actors}
+        />
+        <FilmRating imdbRating = {film.imdbRating}/>
+        <FilmVotes imdbVotes = {film.imdbVotes}/>
+        <FilmPlot plot = {film.plot}/>
     </div>
 ) )
