@@ -1,0 +1,31 @@
+.sort_buttons{
+    display: flex;
+    gap: 6px;
+}
+.sort_buttons>label>span{
+    width: 84px;
+    height: 40px;
+    background: #EBEBEB;
+    border: 1px solid #EBEBEB;
+    border-radius: 5px;
+    font-family: 'Alata', sans-serif;
+    font-size: 12px;
+    line-height: 17px;
+    color: #979797;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 150ms ease-in-out;
+    cursor: pointer;
+}
+.sort_buttons>label>span:hover{
+    background: #7F7FD5;
+    color: #FFFFFF;
+}
+.sort_buttons_inputs{
+    display: none;
+}
+.sort_buttons_inputs:checked + span{
+    background: #7F7FD5;
+    color: #FFFFFF;
+}

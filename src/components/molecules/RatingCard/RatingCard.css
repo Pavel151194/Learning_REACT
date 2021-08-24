@@ -1,6 +1,7 @@
 .rating_card{
     max-width: 798px;
     padding: 32px 29px 64px;
+    margin-bottom: 50px;
     background: #FDFDFF;
     border: 1px solid #EBEBEB;
     border-radius: 13px;

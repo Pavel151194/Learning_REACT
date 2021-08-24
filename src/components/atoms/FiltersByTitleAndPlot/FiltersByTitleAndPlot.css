@@ -1,0 +1,19 @@
+h5{
+    font-family: 'Alata', sans-serif;
+    font-size: 18px;
+    line-height: 25px;
+    color: #979797;
+}
+.filters_by_title_and_plot{
+    display: flex;
+    flex-direction: column;
+}
+.filters_by_title_and_plot>input[type="text"]{
+    width: 150px;
+    height: 32px;
+    background: #FDFDFF;
+    border: 1px solid #EBEBEB;
+    border-radius: 8px;
+    padding: 0 10px;
+    cursor: text;
+}
