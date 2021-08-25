@@ -23,21 +23,3 @@
 .user_rating>label:hover, .user_rating:not(:checked)>label:hover ~ label, .user_rating > input:checked ~ label{
     color: #7F7FD5;
 }
-.user_rating>input[type="button"]{
-    margin: 0 auto;
-    width: 266px;
-    height: 68px;
-    background: #7F7FD5;
-    border: 2px solid #7F7FD5;
-    border-radius: 13px;
-    font-family: 'Alata', sans-serif;
-    font-size: 24px;
-    line-height: 33px;
-    color: #FFFFFF;
-    transition: all 150ms ease-in-out;
-    cursor:pointer;
-}
-.user_rating>input[type="button"]:hover{
-    background: #FFFFFF;
-    color: #7F7FD5;
-}

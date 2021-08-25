@@ -23,7 +23,5 @@ export const UserRating = memo( () => (
         <input id = "star_2" type="radio" name="" value="2"/>
         <label htmlFor = "star_2">★</label>
         <input id = "star_1" type="radio" name="" value="1"/>
-        <label htmlFor = "star_1">★</label>
-        <input type = "button" value="Add rating"/>
     </div>
 ) )

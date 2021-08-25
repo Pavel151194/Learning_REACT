@@ -30,12 +30,18 @@ const App = () => {
             film = {selectedFilm} 
             trailer = {selectedTrailer}
           />
-          <RatingCard title = {"Add rating"}/>
-          <FiltersCard 
-            title = {"Sort by:"}
-            title2 = {"Filter:"}
-            films = {films}
+          <RatingCard
+            title = {"Add rating"}
+            buttonName = {"Add rating"}
+          />
+          {films?.length ? (
+            <FiltersCard 
+              title = {"Sort by:"}
+              title2 = {"Filter:"}
+              films = {films}
+              buttonName = {"Show results"}
             />
+          ) : (<p>No film</p>)}
         </main>
       </div>
     </div>
