@@ -47,9 +47,7 @@ svg path {
 	display: flex;
 }
 nav{
-  width: 98px;
   background: #FDFDFF;
   border: 1px solid #EBEBEB;
-  box-sizing: border-box;
   margin-right: 50px;
 }

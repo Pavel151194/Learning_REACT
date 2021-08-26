@@ -1,11 +1,10 @@
-.trailer_card{
+.filters_card{
     width: 798px;
-    padding: 29px;
-    margin-bottom: 50px;
+    padding: 58px 44px;
     background: #FDFDFF;
     border: 1px solid #EBEBEB;
     border-radius: 13px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
 }

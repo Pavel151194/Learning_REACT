@@ -1,0 +1,49 @@
+.switch{
+    position: relative;
+    bottom: 10%;
+    width: 60px;
+    height: 30px;
+    cursor: pointer;
+}
+.switch>input{
+    display: none;
+}
+.slider{
+    position: absolute;
+    padding: 5px 6px;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #4F4F4F;
+    border-radius: 30px;
+    background-color: #FDFDFF;
+    transition: all 400ms ease-in-out;
+    cursor: pointer;
+}
+.slider_icon{
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #7F7FD5;
+    fill: #FDFDFF;
+    transition: all 400ms ease-in-out;
+    cursor: pointer;
+}
+.slider_icon>path{
+    cursor: pointer;
+}
+input:checked + .slider{
+    background-color: #7F7FD5;
+}
+input:checked + .slider>.slider_icon{
+    transform: translate(26px, 0);
+    background-color: #FDFDFF;
+    fill: #7F7FD5;
+}

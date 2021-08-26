@@ -6,6 +6,13 @@
     border-radius: 13px;
     display: flex;
     flex-direction: column;
+    border: 2px solid #FDFDFF;
+    transition: all 150ms ease-in-out;
+    cursor:pointer;
+}
+.film_card_list:hover{
+    box-shadow: 0 0 5px 2px #7F7FD5;
+    border: 2px solid #7F7FD5;
 }
 .film_card_poster{
     width: 131px;
@@ -13,6 +20,7 @@
     border: 1px solid #EBEBEB;
     align-self: center;
     margin-bottom: 15px;
+    cursor:pointer;
 }
 h4{
     height: 56px;
@@ -21,6 +29,7 @@ h4{
     line-height: 28px;
     color: #4F4F4F;
     margin-bottom: 15px;
+    cursor:pointer;
 }
 .film_card_year{
     font-family: 'Alata', sans-serif;
@@ -28,6 +37,7 @@ h4{
     line-height: 28px;
     color: #7F7FD5;
     margin-bottom: 15px;
+    cursor:pointer;
 }
 .film_card_plot{
     height: 90px;
@@ -39,4 +49,5 @@ h4{
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    cursor:pointer;
 }
