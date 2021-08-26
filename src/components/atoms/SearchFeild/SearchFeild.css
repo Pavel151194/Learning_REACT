@@ -1,0 +1,61 @@
+.search{
+    display: flex;
+    align-items: center;
+}
+.search_feild{
+    width: 150px;
+    height: 32px;
+    padding: 0 10px;
+    margin-right: 25px;
+    background: #FDFDFF;
+    border: 1px solid #EBEBEB;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+.search_button, .filter_button{
+line-height: 0;
+}
+.search_button>.search_icon{
+    width: 15px;
+    height: 15px;
+    fill: rgba(0, 0, 0, 0);
+    transition: all 150ms ease-in-out;
+    cursor: pointer;
+}
+.search_button>.search_icon:hover{
+    transform: scale(1.5);
+}
+.search_button>.search_icon>path{
+    transition: all 150ms ease-in-out;
+    cursor: pointer;
+}
+input[type = search]{
+    width: 100%;
+    height: 100%;
+    margin-right: 10px;
+    border-radius: 8px;
+    font-family: 'Alata', sans-serif;
+    font-size: 12px;
+    line-height: 17px;
+    cursor: text;
+}
+input[type = search]::-webkit-search-decoration, input[type = search]::-webkit-search-cancel-button, input[type = search]::-webkit-search-results-button, input[type = search]::-webkit-search-results-decoration{
+    display: none;
+}
+.filter_button .filter_icon{
+    cursor: pointer;
+}
+.filter_button>.filter_icon{
+    width: 25px;
+    height: 32px;
+    fill: #bebebe;
+    transition: all 150ms ease-in-out;
+    cursor: pointer;
+}
+.filter_button>.filter_icon>path, .filter_button>.filter_icon>rect{
+    cursor: pointer;
+}
+.filter_button>.filter_icon:hover{
+    fill: #7F7FD5;
+}

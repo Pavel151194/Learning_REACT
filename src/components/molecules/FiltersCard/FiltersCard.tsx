@@ -15,7 +15,7 @@ interface IFiltersCard {
 }
 
 export const FiltersCard = memo( ({ title, title2, films, buttonName }: IFiltersCard) => (
-    <div className = "filters_card">
+    <div className = "filters_card hidden">
         <CardTitle title = {title}/>
         <SortButtons/>
         <CardTitle title2 = {title2}/>
