@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { NavBar } from './components/molecules/NavBar'
 import { Header } from './components/molecules/Header'
@@ -10,9 +10,23 @@ import { FiltersCard } from './components/molecules/FiltersCard'
 import { films, trailers } from "./mock"
 
 const App = () => {
-  const selectedFilm = films[1]
+  const selectedFilm = films[1] 
   const selectedTrailer = trailers[0]
-  //const countries = films.reduce( (acc, { country }) => [...new Set([...acc, country])], [] )
+  const $filtersCard: Element | null = document.querySelector(".filters_card")
+
+  const [filteredFilms, setFilteredFilms] = useState(films)
+  const [searchValue, setSearchValue] = useState("")
+  const [toggle, setToggle] = useState(false);
+
+  const showSearchedFilms = () => setFilteredFilms( films.filter( ({ title }) => title.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase()) ) )
+  const setSearhcValue = (text: string) => setSearchValue(text)
+
+  const toggleFiltersCard = () => {
+    setToggle(!toggle)
+  }
+
+
+//$DOMelement.classList.remove("hidden")
   return (
     <div className="App">
       <div className="wrapper">
@@ -20,9 +34,21 @@ const App = () => {
           <NavBar/>
         </nav>
         <main>
-          <Header title = {"Movies"}/>
+          <Header
+            title = {"Movies"}
+            searchFeildValue = {searchValue}
+            onChangeSearchField = {setSearhcValue}
+            onClickSearchButton = {showSearchedFilms}
+            onClickFilterButton = {toggleFiltersCard}
+          />
+          <FiltersCard 
+            title = {"Sort by:"}
+            title2 = {"Filter:"}
+            films = {films}
+            buttonName = {"Show results"}
+          />
           {films?.length ? (
-            <FilmList films = {films}/>
+            <FilmList films = {filteredFilms}/>
           ) : (<p>No film</p>)}
           <FilmCard film = {selectedFilm}/>
           <TrailerCard
@@ -34,14 +60,6 @@ const App = () => {
             title = {"Add rating"}
             buttonName = {"Add rating"}
           />
-          {films?.length ? (
-            <FiltersCard 
-              title = {"Sort by:"}
-              title2 = {"Filter:"}
-              films = {films}
-              buttonName = {"Show results"}
-            />
-          ) : (<p>No film</p>)}
         </main>
       </div>
     </div>

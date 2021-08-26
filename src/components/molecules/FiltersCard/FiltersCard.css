@@ -1,10 +1,19 @@
 .filters_card{
     width: 798px;
     padding: 58px 44px;
-    background: #FDFDFF;
+    margin-bottom: 50px;
     border: 1px solid #EBEBEB;
+    background: #FDFDFF;
     border-radius: 13px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    transition: all 150ms ease-in-out;
 }
+/*.hidden{
+    width: 0;
+    height: 0;
+    padding: none;
+    margin-bottom: none;
+    border: none;
+}*/
