@@ -9,7 +9,6 @@ h5{
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 12px;
-    margin-bottom: 180px;
 }
 .filters>.by_countries{
     grid-column-start: 1;
