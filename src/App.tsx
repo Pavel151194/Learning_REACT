@@ -15,11 +15,11 @@ const App = () => {
 
   const [filteredFilms, setFilteredFilms] = useState(films)
   const [searchValue, setSearchValue] = useState("")
-  const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(false)
 
   const showSearchedFilms = () => setFilteredFilms( films.filter( ({ title }) => title.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase()) ) )
   const setSearhcValue = (text: string) => setSearchValue(text)
-  const toggleFiltersCard = () => setToggle(!toggle)
+  const toggleFiltersCard = () => setToggle(toggle === false)
 
   return (
     <div className="App">
@@ -35,7 +35,7 @@ const App = () => {
             onClickSearchButton = {showSearchedFilms}
             onClickFilterButton = {toggleFiltersCard}
           />
-          {toggle ? (
+          {toggle === true ? (
             <FiltersCard
               className = {"filters_card"}
               title = {"Sort by:"}
@@ -43,10 +43,10 @@ const App = () => {
               films = {films}
               buttonName = {"Show results"}
             />
-          ): null}
-          {films?.length ? (
+          ) : null}
+          {films.length > 0 ? (
             <FilmList films = {filteredFilms}/>
-          ) : (<p>No film</p>)}
+          ) : null}
           <FilmCard film = {selectedFilm}/>
           <TrailerCard
             pretitle = {"Trailer: "}
