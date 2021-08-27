@@ -12,21 +12,15 @@ import { films, trailers } from "./mock"
 const App = () => {
   const selectedFilm = films[1] 
   const selectedTrailer = trailers[0]
-  const $filtersCard: Element | null = document.querySelector(".filters_card")
 
   const [filteredFilms, setFilteredFilms] = useState(films)
   const [searchValue, setSearchValue] = useState("")
-  const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(false)
 
   const showSearchedFilms = () => setFilteredFilms( films.filter( ({ title }) => title.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase()) ) )
   const setSearhcValue = (text: string) => setSearchValue(text)
+  const toggleFiltersCard = () => setToggle(toggle === false)
 
-  const toggleFiltersCard = () => {
-    setToggle(!toggle)
-  }
-
-
-//$DOMelement.classList.remove("hidden")
   return (
     <div className="App">
       <div className="wrapper">
@@ -41,15 +35,18 @@ const App = () => {
             onClickSearchButton = {showSearchedFilms}
             onClickFilterButton = {toggleFiltersCard}
           />
-          <FiltersCard 
-            title = {"Sort by:"}
-            title2 = {"Filter:"}
-            films = {films}
-            buttonName = {"Show results"}
-          />
-          {films?.length ? (
+          {toggle === true ? (
+            <FiltersCard
+              className = {"filters_card"}
+              title = {"Sort by:"}
+              title2 = {"Filter:"}
+              films = {films}
+              buttonName = {"Show results"}
+            />
+          ) : null}
+          {films.length > 0 ? (
             <FilmList films = {filteredFilms}/>
-          ) : (<p>No film</p>)}
+          ) : null}
           <FilmCard film = {selectedFilm}/>
           <TrailerCard
             pretitle = {"Trailer: "}

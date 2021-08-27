@@ -23,8 +23,12 @@ export const SearchFeild = memo( ({ searchFeildValue, onChangeSearchField, onCli
                 <IconSearch className = "search_icon"/>
             </button>
         </label>
-        <button className = "filter_button" onClick = {onClickFilterButton}>
+        <label className = "filter_button">
+            <input
+                type = "checkbox"
+                onClick = {onClickFilterButton}
+            />
             <IconFilter className = "filter_icon"/>
-        </button>
+        </label>
     </div>
 ) )
