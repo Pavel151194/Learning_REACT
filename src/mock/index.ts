@@ -104,3 +104,15 @@ export const trailers: ITrailer[] = [
     description: "Harry Potter and the Deathly Hallows -- Part 2, is the final adventure in the Harry Potter film series. The much-anticipated motion picture event is the second of two full-length parts. In the epic finale, the battle between the good and evil forces of the wizarding world escalates into an all-out war.  The stakes have never been higher and no one is safe.  But it is Harry Potter who may be called upon to make the ultimate sacrifice as he draws closer to the climactic showdown with Lord Voldemort. It all ends here.",
     }
 ]
+export const defaultSortSettings = [
+    {
+      title: "Rating",
+      field: "imdbRating",
+      isActive: false
+    },
+    {
+      title: "Year",
+      field: "year",
+      isActive: false
+    }
+  ]

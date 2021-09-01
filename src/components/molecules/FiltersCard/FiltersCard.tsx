@@ -1,6 +1,6 @@
 import * as React from "react"
 import { memo } from "react"
-import { IFilm } from "../../../types"
+import { ISortSettings } from "../../../types"
 import { CardTitle } from "../../atoms/CardTitle"
 import { SortButtons } from "../../atoms/SortButtons"
 import { Filters } from "../../atoms/Filters"
@@ -8,20 +8,27 @@ import { CardButton } from "../../atoms/CardButton"
 import "./FiltersCard.css"
 
 interface IFiltersCard {
-    className: string
     title: string
-    title2: string
-    films: IFilm[]
+    subTitle: string
+    countries: string[]
     buttonName: string
+    sortSettings: ISortSettings[]
+    onClickSortButton: (field: string) => void
 }
 
-export const FiltersCard = memo( ({ className, title, title2, films, buttonName }: IFiltersCard) => (
-    <div className = {className}>
+export const FiltersCard = memo( ({ title, subTitle, countries, buttonName, sortSettings, onClickSortButton }: IFiltersCard) => (
+    <div className = "filters_card">
         <CardTitle title = {title}/>
-        <SortButtons/>
-        <CardTitle title2 = {title2}/>
+        <div className = "sort_buttons">
+            {sortSettings?.map( (setting) => (
+                <SortButtons {...setting}
+                    onClick = {onClickSortButton}
+                />
+            ) )}
+        </div>
+        <CardTitle subTitle = {subTitle}/>
         <Filters
-            countries = {Array.from( new Set( films.map( ({ country }) => (country.split(', ')) ).flat() ) )}
+            countries = {countries}
         />
         <CardButton title = {buttonName}/>
     </div>

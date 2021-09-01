@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import { films, trailers, defaultSortSettings } from "./mock"
 import { NavBar } from './components/molecules/NavBar'
 import { Header } from './components/molecules/Header'
 import { FilmList } from './components/molecules/FilmList'
@@ -7,7 +8,7 @@ import { FilmCard } from './components/molecules/FilmCard'
 import { TrailerCard } from './components/molecules/TrailerCard'
 import { RatingCard } from './components/molecules/RatingCard'
 import { FiltersCard } from './components/molecules/FiltersCard'
-import { films, trailers } from "./mock"
+//import { Pagination } from './components/molecules/Pagination';
 
 const App = () => {
   const selectedFilm = films[1] 
@@ -15,11 +16,23 @@ const App = () => {
 
   const [filteredFilms, setFilteredFilms] = useState(films)
   const [searchValue, setSearchValue] = useState("")
-  const [toggle, setToggle] = useState(false)
+  const [isFiltersCardActive, setFiltersCardState] = useState(false)
+  const [sortSettings, setSortSettings] = useState(defaultSortSettings)
 
   const showSearchedFilms = () => setFilteredFilms( films.filter( ({ title }) => title.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase()) ) )
-  const setSearhcValue = (text: string) => setSearchValue(text)
-  const toggleFiltersCard = () => setToggle(toggle === false)
+
+  useEffect( () => {
+    setFilteredFilms( films.filter( ({ title }) => title.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase()) ) )
+  }, [searchValue])
+
+  const getSearchValue = (text: string) => setSearchValue(text)
+  const toggleFiltersCard = () => setFiltersCardState(isFiltersCardActive === false)
+
+  const toggleSorting = (field: string) => {
+    console.log("handlerSorting", { field })
+    const sortedFilms = [...films].sort((a: any, b: any) => a[field] -  b[field])
+    setFilteredFilms(sortedFilms)
+  }
 
   return (
     <div className="App">
@@ -30,23 +43,25 @@ const App = () => {
         <main>
           <Header
             title = {"Movies"}
-            searchFeildValue = {searchValue}
-            onChangeSearchField = {setSearhcValue}
-            onClickSearchButton = {showSearchedFilms}
+            searchFieldValue = {searchValue}
+            onChangeSearchField = {getSearchValue}
             onClickFilterButton = {toggleFiltersCard}
           />
-          {toggle === true ? (
+          {isFiltersCardActive ? (
             <FiltersCard
-              className = {"filters_card"}
               title = {"Sort by:"}
-              title2 = {"Filter:"}
-              films = {films}
+              subTitle = {"Filter:"}
+              countries = {Array.from(new Set(films.map( ({ country }) => (country.split(', ')) ).flat()))}
               buttonName = {"Show results"}
+              
+              sortSettings = {defaultSortSettings}
+              onClickSortButton = {toggleSorting}
             />
           ) : null}
-          {films.length > 0 ? (
+          {filteredFilms.length > 0 ? (
             <FilmList films = {filteredFilms}/>
-          ) : null}
+          ) : <p>No films</p>}
+          {/*<Pagination numberOfPages = {filteredFilms.length}/>*/}
           <FilmCard film = {selectedFilm}/>
           <TrailerCard
             pretitle = {"Trailer: "}

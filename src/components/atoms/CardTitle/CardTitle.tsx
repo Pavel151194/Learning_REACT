@@ -5,9 +5,9 @@ import "./CardTitle.css"
 interface ICardTitle {
     pretitle?: string
     title?: string
-    title2?: string
+    subTitle?: string
 }
 
-export const CardTitle = memo( ({ pretitle, title, title2 }: ICardTitle) => (
-    <h3 className = "card_title">{pretitle}{title}{title2}</h3>
+export const CardTitle = memo( ({ pretitle, title, subTitle }: ICardTitle) => (
+    <h3 className = "card_title">{pretitle}{title}{subTitle}</h3>
 ) )

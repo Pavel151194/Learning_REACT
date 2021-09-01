@@ -1,9 +1,9 @@
-.sort_buttons{
+.sort_button{
     grid-row-start: 2;
     display: flex;
-    gap: 6px;
+    gap: 6px;  
 }
-.sort_buttons>label>span{
+.sort_button>span{
     width: 84px;
     height: 40px;
     background: #EBEBEB;
@@ -19,14 +19,18 @@
     transition: all 150ms ease-in-out;
     cursor: pointer;
 }
-.sort_buttons>label>span:hover{
-    background: #7F7FD5;
-    color: #FFFFFF;
+.sort_button>span:hover{
+    border: 1px solid #7F7FD5;
+    color: #7F7FD5;
 }
-.sort_buttons_inputs{
+.sort_button_inputs{
     display: none;
 }
-.sort_buttons_inputs:checked + span{
+.sort_button_inputs:checked + span{
+    border: 1px solid #7F7FD5;
     background: #7F7FD5;
     color: #FFFFFF;
+}
+.sort_button_inputs:checked + span:hover{
+    font-size: 16px;
 }

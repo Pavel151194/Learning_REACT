@@ -6,19 +6,17 @@ import "./Header.css"
 
 interface IHeader {
     title: string
-    searchFeildValue: string
+    searchFieldValue: string
     onChangeSearchField: (text: string) => void
-    onClickSearchButton: () => void
     onClickFilterButton: () => void
 }
 
-export const Header  = memo( ({ title, searchFeildValue, onChangeSearchField, onClickSearchButton, onClickFilterButton }: IHeader) => (
+export const Header  = memo( ({ title, searchFieldValue, onChangeSearchField, onClickFilterButton }: IHeader) => (
     <div className = "header">
         <PageTitle title = {title}/>
         <SearchFeild 
-            searchFeildValue = {searchFeildValue}
+            searchFieldValue = {searchFieldValue}
             onChangeSearchField = {onChangeSearchField}
-            onClickSearchButton = {onClickSearchButton}
             onClickFilterButton = {onClickFilterButton}
         />
     </div>

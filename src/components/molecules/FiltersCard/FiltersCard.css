@@ -9,3 +9,7 @@
     flex-direction: column;
     gap: 20px;
 }
+.sort_buttons{
+    display: flex;
+    gap: 6px;
+}
