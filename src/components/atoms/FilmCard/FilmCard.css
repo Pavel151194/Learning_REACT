@@ -1,6 +1,8 @@
 .film_card_list{
     max-width: 341px;
     margin-bottom: 10px;
+    grid-column-start: 1;
+    grid-column-end: 4;
     padding: 24px;
     background: #FDFDFF;
     border-radius: 13px;
@@ -40,7 +42,6 @@ h4{
     cursor:pointer;
 }
 .film_card_plot{
-    height: 90px;
     font-family: 'Alata', sans-serif;
     font-size: 20px;
     line-height: 28px;
@@ -50,4 +51,32 @@ h4{
     -webkit-box-orient: vertical;
     overflow: hidden;
     cursor:pointer;
+}
+.film_card_slider_name{
+    align-self: center;
+    font-family: 'Alata', sans-serif;
+    font-size: 20px;
+    line-height: 28px;
+    color: #979797;
+}
+.film_card_slider_icon{
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #7F7FD5;
+    fill: #7F7FD5;
+    transition: all 400ms ease-in-out;
+    cursor: pointer;
+}
+.film_card_slider_icon>rect{
+    cursor: pointer;
+}
+input:checked + .slider>.film_card_slider_icon{
+    transform: translate(26px, 0);
+    background-color: #FDFDFF;
+    fill: #FDFDFF;
 }
