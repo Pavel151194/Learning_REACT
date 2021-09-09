@@ -4,22 +4,21 @@ import { IconSearch, IconFilter } from "../../../assets/icons"
 import "./SearchFeild.css"
   
 interface ISearchFeild{
-    searchFeildValue: string
+    searchFieldValue: string
     onChangeSearchField: (text: string) => void
-    onClickSearchButton: () => void
     onClickFilterButton: () => void
 }
 
-export const SearchFeild = memo( ({ searchFeildValue, onChangeSearchField, onClickSearchButton, onClickFilterButton }: ISearchFeild) => (
+export const SearchFeild = memo( ({ searchFieldValue, onChangeSearchField, onClickFilterButton }: ISearchFeild) => (
     <div className = "search">
         <label className = "search_feild">
             <input 
                 type = "search"
                 placeholder = "Search"
-                value = {searchFeildValue}
+                value = {searchFieldValue}
                 onChange = {event => onChangeSearchField(event.target.value)}
             />
-            <button className = "search_button" onClick = {onClickSearchButton}>
+            <button className = "search_button">
                 <IconSearch className = "search_icon"/>
             </button>
         </label>

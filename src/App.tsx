@@ -1,65 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import './App.css';
-import { NavBar } from './components/molecules/NavBar'
-import { Header } from './components/molecules/Header'
-import { FilmList } from './components/molecules/FilmList'
-import { FilmCard } from './components/molecules/FilmCard'
-import { TrailerCard } from './components/molecules/TrailerCard'
-import { RatingCard } from './components/molecules/RatingCard'
-import { FiltersCard } from './components/molecules/FiltersCard'
-import { films, trailers } from "./mock"
+import { Home } from './components/pages/Home'
+import { PageTitle } from './components/atoms/PageTitle';
+import { Film } from './components/pages/Film';
 
 const App = () => {
-  const selectedFilm = films[1] 
-  const selectedTrailer = trailers[0]
-
-  const [filteredFilms, setFilteredFilms] = useState(films)
-  const [searchValue, setSearchValue] = useState("")
-  const [toggle, setToggle] = useState(false)
-
-  const showSearchedFilms = () => setFilteredFilms( films.filter( ({ title }) => title.toLocaleLowerCase().includes(searchValue.toLocaleLowerCase()) ) )
-  const setSearhcValue = (text: string) => setSearchValue(text)
-  const toggleFiltersCard = () => setToggle(toggle === false)
-
   return (
-    <div className="App">
-      <div className="wrapper">
-        <nav>
-          <NavBar/>
-        </nav>
-        <main>
-          <Header
-            title = {"Movies"}
-            searchFeildValue = {searchValue}
-            onChangeSearchField = {setSearhcValue}
-            onClickSearchButton = {showSearchedFilms}
-            onClickFilterButton = {toggleFiltersCard}
-          />
-          {toggle === true ? (
-            <FiltersCard
-              className = {"filters_card"}
-              title = {"Sort by:"}
-              title2 = {"Filter:"}
-              films = {films}
-              buttonName = {"Show results"}
-            />
-          ) : null}
-          {films.length > 0 ? (
-            <FilmList films = {filteredFilms}/>
-          ) : null}
-          <FilmCard film = {selectedFilm}/>
-          <TrailerCard
-            pretitle = {"Trailer: "}
-            film = {selectedFilm} 
-            trailer = {selectedTrailer}
-          />
-          <RatingCard
-            title = {"Add rating"}
-            buttonName = {"Add rating"}
-          />
-        </main>
-      </div>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path="/">
+          <Home/>
+        </Route>
+        <Route exact path="/films/:id">
+          <Film/>
+        </Route>
+        <Route>
+          <PageTitle title={"Not found"}/>
+        </Route>
+      </Switch>
+    </Router>
   )
 }
 

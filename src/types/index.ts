@@ -22,3 +22,8 @@ export interface ITrailer {
     trailer: string
     description: string
 }
+export interface ISortSettings {
+    title: string
+    field: string
+    isActive: boolean
+}

@@ -1,11 +1,14 @@
 .filters_card{
     width: 798px;
     padding: 58px 44px;
-    margin-bottom: 50px;
     border: 1px solid #EBEBEB;
     background: #FDFDFF;
     border-radius: 13px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+.sort_buttons{
+    display: flex;
+    gap: 6px;
 }

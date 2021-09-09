@@ -1,16 +1,22 @@
 import * as React from "react"
 import { memo } from "react"
-import "./SortButtons.css"
+import "./SortButton.css"
 
-export const SortButtons = memo( () => (
-    <div className = "sort_buttons">
-        <label>
-            <input className = "sort_buttons_inputs" type = "checkbox" value = "Rating"/>
-            <span>Rating</span>
-        </label>
-        <label>
-            <input className = "sort_buttons_inputs" type = "checkbox" value = "Year"/>
-            <span>Year</span>
-        </label>
-    </div>
+interface ISortButtons {
+    title: string
+    isActive: boolean
+    onClick: (field: string) => void
+    field: string
+}
+
+export const SortButtons = memo( ({ title, isActive, onClick, field }: ISortButtons) => (
+    <label className = "sort_button">
+        <input
+            className = "sort_button_inputs"
+            type = "checkbox" 
+            value = {title}
+            onClick = {() => onClick(field)}
+        />
+        <span>{title}</span>
+    </label>
 ) )

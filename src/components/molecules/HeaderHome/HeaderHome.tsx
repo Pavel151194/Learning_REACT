@@ -1,25 +1,23 @@
-import * as React from "react"
+import React, { useState, useEffect } from 'react'
 import { memo } from "react"
 import { PageTitle } from "../../atoms/PageTitle"
 import { SearchFeild } from "../../atoms/SearchFeild"
-import "./Header.css"
+import "./HeaderHome.css"
 
-interface IHeader {
+interface IHeaderHome {
     title: string
-    searchFeildValue: string
+    searchFieldValue: string
     onChangeSearchField: (text: string) => void
-    onClickSearchButton: () => void
     onClickFilterButton: () => void
 }
 
-export const Header  = memo( ({ title, searchFeildValue, onChangeSearchField, onClickSearchButton, onClickFilterButton }: IHeader) => (
-    <div className = "header">
+export const HeaderHome  = memo( ({ title, searchFieldValue, onChangeSearchField, onClickFilterButton }: IHeaderHome) => (
+    <header className = "header">
         <PageTitle title = {title}/>
         <SearchFeild 
-            searchFeildValue = {searchFeildValue}
+            searchFieldValue = {searchFieldValue}
             onChangeSearchField = {onChangeSearchField}
-            onClickSearchButton = {onClickSearchButton}
             onClickFilterButton = {onClickFilterButton}
         />
-    </div>
+    </header>
 ) )

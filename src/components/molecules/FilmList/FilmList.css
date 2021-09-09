@@ -4,3 +4,23 @@
     gap: 25px;
     margin-bottom: 50px;
 }
+.film_card_button{
+    width: 84px;
+    height: 40px;
+    background: #EBEBEB;
+    border: 1px solid #EBEBEB;
+    border-radius: 5px;
+    font-family: 'Alata', sans-serif;
+    font-size: 12px;
+    line-height: 17px;
+    color: #979797;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 150ms ease-in-out;
+    cursor: pointer;
+}
+.film_card_button:hover{
+    background: #7F7FD5;
+    color: #FFFFFF;
+}
