@@ -6,14 +6,14 @@
 .nav_links>li{
     line-height: 0;
 }
-.nav_links>li>svg{
+.nav_icon{
     cursor: pointer;
     fill: #DFE6F1;
     transition: all 150ms ease-in-out;
 }
-.nav_links>li>svg>path{
+.nav_icon>path{
     cursor: pointer;
 }
-.nav_links>li>svg:hover{
+.nav_icon:hover{
     fill: #7F7FD5;
 }

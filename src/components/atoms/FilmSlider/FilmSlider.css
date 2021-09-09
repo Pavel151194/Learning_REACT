@@ -23,7 +23,7 @@
     transition: all 400ms ease-in-out;
     cursor: pointer;
 }
-.nav_slider_icon{
+.slider_icon{
     width: 20px;
     height: 20px;
     padding: 5px;
@@ -32,17 +32,17 @@
     align-items: center;
     justify-content: center;
     background-color: #7F7FD5;
-    fill: #FDFDFF;
+
     transition: all 400ms ease-in-out;
     cursor: pointer;
 }
-.nav_slider_icon>path{
+.slider_icon>path{
     cursor: pointer;
 }
 input:checked + .slider{
     background-color: #7F7FD5;
 }
-input:checked + .slider>.nav_slider_icon{
+input:checked + .slider>.slider_icon{
     transform: translate(26px, 0);
     background-color: #FDFDFF;
     fill: #7F7FD5;

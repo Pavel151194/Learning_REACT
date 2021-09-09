@@ -5,8 +5,8 @@ import { NavSlider } from "../../atoms/NavSlider"
 import "./NavBar.css"
 
 export const NavBar  = memo( () => (
-    <div className = "nav_bar">
+    <nav className = "nav_bar">
         <NavLinks/>
         <NavSlider/>
-    </div>
+    </nav>
 ) )

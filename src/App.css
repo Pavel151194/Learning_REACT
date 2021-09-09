@@ -32,16 +32,10 @@ img{
 li{
 	list-style-type: none;
 }
-.App{
-  background: #f0f0fc;
-}
-.wrapper{
-	margin: 0 auto;
-	padding: 0 10px 0 0;
-	display: flex;
-}
-nav{
-  background: #FDFDFF;
-  border: 1px solid #EBEBEB;
-  margin-right: 50px;
+.page{
+    display: grid;
+    grid-template-columns: 98px auto;
+    grid-template-rows: auto auto auto;
+    gap: 25px;
+    background: #f0f0fc;
 }

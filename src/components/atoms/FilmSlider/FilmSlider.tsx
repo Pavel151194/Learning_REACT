@@ -1,13 +1,13 @@
 import * as React from "react"
 import { memo } from "react"
-import { IconMoon } from "../../../assets/icons"
-import "./NavSlider.css"
+import { IconCircle } from "../../../assets/icons"
+import "./FilmSlider.css"
 
-export const NavSlider = memo( () => (
+export const FilmSlider = memo( () => (
     <label className = "switch">
         <input type = "checkbox"/>
         <span className = "slider">
-            <IconMoon className = {"nav_slider_icon"}/>
+            <IconCircle className = {"film_slider_icon"}/>
         </span>
     </label>
 ) )

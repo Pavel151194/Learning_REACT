@@ -1,12 +1,12 @@
 .film_card_list{
     max-width: 341px;
+    margin-bottom: 10px;
     padding: 24px;
     background: #FDFDFF;
-    border: 1px solid #EBEBEB;
     border-radius: 13px;
     display: flex;
     flex-direction: column;
-    border: 2px solid #FDFDFF;
+    border: 2px solid #EBEBEB;
     transition: all 150ms ease-in-out;
     cursor:pointer;
 }
