@@ -66,15 +66,7 @@ export const Films = () => {
                     onClickSortButton = {toggleSorting}
                 />
                 ) : null}
-                {filteredFilms.length > 0 ? (
-                <FilmList 
-                    onClickFilmCard = {selectFilm}
-                    addBookmark = {addBookmark}
-                    removeBookmark = {removeBookmark}
-                    films = {filteredFilms}
-                    bookmarksId = {bookmarksId}
-                />
-                ) : <p>No films</p>}
+
                 <RatingCard
                     title = {"Add rating"}
                     buttonName = {"Add rating"}

@@ -64,7 +64,6 @@ export const Home = () => {
                 />
             ) : null}
             <FilmList 
-                onClickFilmCard = {selectFilm}
                 addBookmark = {addBookmark}
                 removeBookmark = {removeBookmark}
                 films = {filteredFilms}

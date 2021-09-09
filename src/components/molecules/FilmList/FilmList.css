@@ -4,6 +4,10 @@
     gap: 25px;
     margin-bottom: 50px;
 }
+.film_list>li{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+}
 .film_card_button{
     width: 84px;
     height: 40px;
